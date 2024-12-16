@@ -1,0 +1,15 @@
+The following CSS code snippet demonstrates an uncommon issue related to the specificity of CSS selectors:
+
+```css
+div p {
+  color: blue;
+}
+
+p {
+  color: red;
+}
+```
+
+In this case, both selectors target the same element (`p`), but the first selector (`div p`) is more specific because it includes an additional parent element (`div`). The browser will prioritize the more specific selector, resulting in the paragraph text being blue even if the general `p` selector has higher precedence based on order.
+
+This can lead to unexpected behavior and is difficult to debug because it involves an often overlooked aspect of specificity.
