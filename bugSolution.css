@@ -1,0 +1,21 @@
+To solve this issue, you can use one of the following approaches:
+
+1. **Increase Specificity of the Less Specific Selector:** Add more specific selectors to the second rule to match the specificity of the first rule. For example:
+
+```css
+div p {
+  color: blue;
+}
+
+div > p {
+  color: red;
+}
+```
+
+2. **Adjust Order Based on Specificity:**  Ensure that the most specific selectors are applied later. This is not always practical or a good approach to CSS design, but can be helpful in certain circumstances.   However, relying on order for specificity is generally bad practice and can lead to harder-to-maintain CSS.
+
+3. **Use more appropriate selectors:**  Select the elements with more specific selectors such as classes or IDs instead of simply relying on the tag names.  This generally results in more maintainable code.
+
+4. **!important:**  Avoid using `!important` unless absolutely necessary. While it solves the issue, it makes your CSS harder to maintain and debug.  It’s better to adjust your selectors for better specificity.
+
+The best approach is to improve selector specificity, ideally without introducing unnecessary complexity.  The approach will depend on the actual project and the context of the HTML structure.
